@@ -29,4 +29,17 @@ li{
     font-size: 16px;
     margin: 4px 2px;
     border-radius: 50%;
-  }
+}
+.container {
+    height: 200px;
+    position: relative;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

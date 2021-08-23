@@ -9,6 +9,6 @@ def enternumber(request):
     number = int(request.GET["number"])
     if(number > 0):
         result = [n for n in range(1, number+1)]
-        return render(request, 'number.html', { "resnumber": result })
+        return render(request, 'number.html', { "resnumber": result , "link":"http://127.0.0.1:8000/number"})
     else:
-        print("Invalid number entered! Please enter a positive number")
+        return "Invalid number entered! Please enter a positive number."
