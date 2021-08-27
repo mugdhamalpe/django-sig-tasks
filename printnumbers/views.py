@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+
 # Create your views here.
 
 def index(request):
@@ -7,8 +8,8 @@ def index(request):
 
 def enternumber(request):
     number = int(request.GET["number"])
-    if(number > 0):
+    if(number > 0 and number < 500):
         result = [n for n in range(1, number+1)]
-        return render(request, 'number.html', { "resnumber": result , "link":"http://127.0.0.1:8000/number"})
+        return render(request, 'number.html', { "resnumber": result , "link":"http://127.0.0.1:8000"})
     else:
-        return "Invalid number entered! Please enter a positive number."
+        return render(request, 'invalid.html', {"link":"http://127.0.0.1:8000"})
