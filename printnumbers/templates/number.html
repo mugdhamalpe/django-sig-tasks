@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'number.css' %}">
+</head>
+<body>
+    <h2 class="heading">List of numbers from 1 to entered number,N are as follows: </h2>
+    {% csrf_token %}
+    {% if n < 0 %}
+        <h2>Invalid number entered!</h2>
+        <h3>Please enter a postive number</h3>
+    {% else %}
+        {% for n in resnumber %}
+            <ul style="list-style-type:none;">
+                <li>{{n}}</li>
+            </ul>
+        {% endfor %}
+    {% endif %}
+    <div class="container">
+        <div class="center">
+            <a href="{% url 'enternumber' %}" class="button">Back</a>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+body{
+    background-image: linear-gradient(#2980b9, #8e44ad);
+    background-repeat: no-repeat!important;
+}
+
+.heading{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    text-shadow: 0.2rem 0.2rem 0.8rem black;
+}
+
+.button {
+    text-align: center;
+    background-color: #3d3fb4;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+}
+
+.container {
+    height: 200px;
+    position: relative;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

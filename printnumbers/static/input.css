@@ -1,0 +1,36 @@
+body{
+    margin: 0 auto;
+    /* background-color: #222; */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(60deg,#2980b9, #8e44ad)!important;
+    overflow: hidden;
+}
+.takeinput{
+    text-align: center;
+}
+.intro{
+    text-align: center;
+    text-shadow: 0.2rem 0.2rem 0.8rem black;
+}
+.intro2{
+    text-align: center;
+}
+input[type=text] {
+    width: 100px;
+    height: 32px;
+}
+input[type=submit] {
+    background-color: #3d3fb4;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background:#016ABC;
+    color:black;
+    border-radius:20px;
+    text-shadow:none;
+}

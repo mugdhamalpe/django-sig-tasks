@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take input from user</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'input.css' %}">
+</head>
+<body>
+    <form action="{% url 'enternumber' %}" method="POST">
+        {% csrf_token %}
+        <div class="takeinput">
+            <h2 class="intro">Enter the number till which the numbers are required to be printed!</h2>
+            <br>
+            <h3 class="intro2">Enter a positive number less than 500: <input type="text" name="number"></h3>
+            <br>
+            <input type="submit">
+            <p>
+                If you enter a number which doesn't satisfy the conditions of being positive number and being less than 500
+                <br>
+                Then, you will be redirected to a page showing that the number entered is invalid!
+            </p>
+        </div>
+    </form>
+</body>
+</html>
