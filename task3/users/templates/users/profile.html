@@ -1,0 +1,7 @@
+{% extends "home/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h3>Hello there!</h3>
+    <h1>You have been logged in as {{ user.username }}</h1>
+    <h2>You have an email id of {{ user.email }}</h2>
+{% endblock content %}
